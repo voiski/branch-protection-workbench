@@ -1,0 +1,16 @@
+name: Sample action
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - edited
+
+jobs:
+  some-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Message
+        run: |
+          echo "Sample action"
